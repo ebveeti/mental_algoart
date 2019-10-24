@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="1000" height="1000"
+style="border:0px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+  
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+  
+function randomShorted() {
+	return Math.random() / Math.random() / Math.random() / Math.random() / Math.random() / Math.random() / Math.random();
+}
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = getRandomColor();
+ctx.fillRect(0,0,myCanvas.width,myCanvas.height);  
+
+for (i = 0; i < 100; i++) {
+  	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	ctx.fillStyle = getRandomColor();
+	var a = randomShorted();
+	var b = randomShorted();
+	var c = randomShorted();
+	var d = randomShorted();
+  	do {
+      var workOpac = randomShorted();
+	}
+	while (workOpac > 100);
+  
+ 	ctx.globalAlpha = workOpac;
+	ctx.fillRect(a,b,c,d);
+	ctx.globalAlpha = 1.0;
+}
+for (i = 0; i < 10; i++) {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var e = randomShorted();
+  var f = randomShorted();
+  var g = randomShorted();
+  var h = randomShorted();
+  ctx.moveTo(e,f);
+  ctx.lineTo(g,h);
+  ctx.lineWidth = 10;
+  ctx.strokeStyle = getRandomColor();
+  do {
+      var workOpac = randomShorted();
+	}
+	while (workOpac > 100);
+  
+  ctx.globalAlpha = workOpac;
+  ctx.stroke();
+  ctx.globalAlpha = 1.0;
+}
+for (i = 0; i < 100000; i++) {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var i = randomShorted();
+  var j = randomShorted();
+  var k = randomShorted();
+  var l = randomShorted();
+  var m = randomShorted();
+  ctx.lineWidth = 10;
+  ctx.strokeStyle = getRandomColor();
+  ctx.beginPath();
+  ctx.arc(i, j, k, l, m * Math.PI);
+  do {
+      var workOpac = randomShorted();
+	}
+	while (workOpac > 100);
+  
+  ctx.globalAlpha = workOpac;
+  ctx.stroke();
+  ctx.globalAlpha = 1.0;
+}
+  
+</script>
+
+</body>
+</html>
