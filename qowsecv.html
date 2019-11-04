@@ -22,6 +22,7 @@ function randomShorted() {
 	return Math.random() / Math.random() / Math.random() / Math.random() / Math.random() / Math.random() / Math.random();
 }
 var canvas = document.getElementById("myCanvas");
+var realOpacLimit = 1;
 var ctx = canvas.getContext("2d");
 ctx.fillStyle = getRandomColor();
 ctx.fillRect(0,0,myCanvas.width,myCanvas.height);  
@@ -37,7 +38,7 @@ for (i = 0; i < 100; i++) {
   	do {
       var workOpac = randomShorted();
 	}
-	while (workOpac > 100);
+	while (workOpac > realOpacLimit);
   
  	ctx.globalAlpha = workOpac;
 	ctx.fillRect(a,b,c,d);
@@ -57,7 +58,7 @@ for (i = 0; i < 10; i++) {
   do {
       var workOpac = randomShorted();
 	}
-	while (workOpac > 100);
+	while (workOpac > realOpacLimit);
   
   ctx.globalAlpha = workOpac;
   ctx.stroke();
@@ -78,7 +79,7 @@ for (i = 0; i < 100000; i++) {
   do {
       var workOpac = randomShorted();
 	}
-	while (workOpac > 100);
+	while (workOpac > realOpacLimit);
   
   ctx.globalAlpha = workOpac;
   ctx.stroke();
