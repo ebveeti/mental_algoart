@@ -41,6 +41,10 @@ for (i = 0; i < 100; i++) {
 	while (workOpac > realOpacLimit);
   
  	ctx.globalAlpha = workOpac;
+    var grd = ctx.createLinearGradient(a,b,c,d);
+    grd.addColorStop(0,getRandomColor());
+    grd.addColorStop(1,getRandomColor());
+    ctx.fillStyle = grd;
 	ctx.fillRect(a,b,c,d);
 	ctx.globalAlpha = 1.0;
 }
